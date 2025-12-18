@@ -1,0 +1,10 @@
+/* Style de départ - Ne pas modifier */
+* {box-sizing: border-box;}
+body {margin: 0;}
+footer {height: 2em; padding: 0.5em; background-color: #a7bcb9; display: flex; justify-content: space-between;}
+.wrapper {display: grid; grid-template-columns: 300px 1fr; height: calc(100vh - 2em);}
+aside {background-color: #e0ebeb; border-right: 4px solid #24527a; padding: 1em;}
+main {padding: 0.5em; background-size: cover; background-position: center; background-color: #5dacbd; background-repeat: no-repeat; }
+
+
+/* Ajoutez vos règles à partir d'ici */

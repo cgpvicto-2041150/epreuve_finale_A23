@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Web - Épreuve finale</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
+
+    <!-- Ajout pour l'icone télécharger -->
+    <script src="https://kit.fontawesome.com/80e9d74121.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <!-- Le panneau de configuration pour la génération du texte -->
+        <aside>
+            <div id="configuration">
+                <h2>Configuration</h2>
+
+                <label for='texte-message'>Texte à afficher</label>
+                <input type='text' id='texte-message' name='texte-message'>
+
+                <label for='taille-texte'>Taille du texte (em)</label>
+                <input type='range' id='taille-texte' name='taille-texte' min="3" max="15" step="0.25" value="8">
+                <span id="affiche-taille"></span>
+
+                <label for='police-texte'>Police de caractères</label>
+                <select name="police-texte" id="police-texte">
+                    <option value="Balloon">Balloon</option>
+                    <option value="HomeHoliday">HomeHoliday</option>
+                    <option value="HappyHoliday">HappyHoliday</option>
+                </select>
+
+                <label for='couleur-texte'>Couleur du texte</label>
+                <input type='color' id='couleur-texte' name='couleur-texte'>
+                
+                <div class="ligne-checkbox">
+                    <input type='checkbox' id='ombre-texte' name='ombre-texte'>
+                    <label for='ombre-texte'>Ajouter un <i>text-shadow</i></label>
+                </div>
+                
+                <div class="ligne-checkbox">
+                    <input type='checkbox' id='choix-image-fond' name='choix-image-fond'>
+                    <label for='choix-image-fond'>Masquer l'image en arrière-plan</label>
+                </div>
+                
+            </div>
+            
+            <button type="button" id="bouton-generer">Générer le texte</button>
+
+        </aside>
+        
+        <!-- Le texte généré sera affiché dans cet élément -->
+        <main id="zone-affichage" class="image-fond">
+            <span id="affichage-texte"></span>
+        </main>
+    
+    </div>
+
+    <footer>
+        <em>Examen rédigé par Carine Croteau et Mathieu Fréchette. Il est interdit de partager cet énoncé.</em>
+        <span id="credit-photo">Photo de <a href="https://unsplash.com/fr/@epw615?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">erin mckenna</a> sur <a href="https://unsplash.com/fr/photos/deux-figurines-delfe-sur-letagere-kFbSKhukfIQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></span>
+    </footer>
+
+</body>
+</html>

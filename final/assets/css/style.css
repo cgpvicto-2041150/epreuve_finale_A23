@@ -1,0 +1,112 @@
+/* Style de départ - Ne pas modifier */
+* {box-sizing: border-box;}
+body {margin: 0;}
+footer {height: 2em; padding: 0.5em; background-color: #a7bcb9;
+display: flex;
+justify-content: space-between;}
+.wrapper {display: grid; grid-template-columns: 300px 1fr; height: calc(100vh - 2em);}
+aside {background-color: #e0ebeb; border-right: 4px solid #24527a; padding: 1em;}
+main {padding: 0.5em; background-size: cover; background-position: center;
+    background-color: #5dacbd; background-repeat: no-repeat; }
+.telechargement {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.telechargement i {
+    font-size: 4rem;
+    color: #24527a;
+    text-shadow: 4px 4px 2px #a7bcb9;
+}
+.telechargement i:hover {
+    color: #5dacbd;
+}
+/* Ajoutez vos règles à partir d'ici */
+
+/* Importation des polices */
+@font-face {
+    font-family: "Balloon";
+    src: url(../font/Balloon.otf);
+}
+
+@font-face {
+    font-family: "HomeHoliday";
+    src: url(../font/HomeHoliday.otf);
+}
+
+@font-face {
+    font-family: "HappyHoliday";
+    src: url(../font/HappyHoliday.ttf);
+}
+
+/* Disposition de la zone de configuration */
+/* Pour l'alignement du bouton en bas de page j'ai utilisé la propriété justify-content (Dans la balise aside je n'ai
+que deux items, une div qui contient tous les contrôles et le bouton. Avec justify-content: space-between le premier item
+est "collé" dans le haut du aside et le bouton dans le bas. */
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Style sur l'élément label pour qu'un saut de ligne soit effectué après l'élément */
+#configuration > label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+
+}
+
+/* Style sur le bouton générer */
+#bouton-generer {
+    background-color: #24527a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Lancement de l'animation quand on survol le bouton */
+#bouton-generer:hover {
+    animation: boutonHover 1s ease-in-out infinite;
+}
+
+/* Ajout de l'image de fond */
+.image-fond {
+    background-image: url("../images/background.jpg");    
+}
+
+/* Centrer le texte dans la zone d'affichage */
+main {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ligne-checkbox {
+    margin-top: 1em;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Animation du bouton */
+@keyframes boutonHover {
+    0% {
+        transform: scale(1);
+        background-color: #24527a;
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: #5dacbd;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #24527a;
+    }
+    
+}
