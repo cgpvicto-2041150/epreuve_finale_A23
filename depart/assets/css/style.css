@@ -1,10 +1,96 @@
-/* Style de départ - Ne pas modifier */
 * {box-sizing: border-box;}
 body {margin: 0;}
-footer {height: 2em; padding: 0.5em; background-color: #a7bcb9; display: flex; justify-content: space-between;}
+footer {height: 2em; padding: 0.5em; background-color: #a7bcb9;
+display: flex;
+justify-content: space-between;}
 .wrapper {display: grid; grid-template-columns: 300px 1fr; height: calc(100vh - 2em);}
 aside {background-color: #e0ebeb; border-right: 4px solid #24527a; padding: 1em;}
-main {padding: 0.5em; background-size: cover; background-position: center; background-color: #5dacbd; background-repeat: no-repeat; }
-
-
+main {padding: 0.5em; background-size: cover; background-position: center;
+    background-color: #5dacbd; background-repeat: no-repeat; }
+.telechargement {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.telechargement i {
+    font-size: 4rem;
+    color: #24527a;
+    text-shadow: 4px 4px 2px #a7bcb9;
+}
+.telechargement i:hover {
+    color: #5dacbd;
+}
 /* Ajoutez vos règles à partir d'ici */
+.image-fond{
+    background-image: url(../images/background.jpg);
+}
+
+@font-face {
+    font-family: "Balloon";
+    src: url(../font/Balloon.otf);
+}
+
+@font-face {
+    font-family: "HappyHoliday";
+    src: url(../font/HappyHoliday.ttf);
+}
+
+@font-face {
+    font-family: "HomeHoliday";
+    src: url(../font/HomeHoliday.otf);
+}
+
+aside{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#configuration > label{
+    display: block;
+    margin-top: rem;
+    margin-bottom: 0.5em;
+}
+
+#bouton-generer{
+    background-color: #24527a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding:5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#bouton-generer:hover{
+    animation: boutonHover 1s ease-in-out infinite;
+}
+
+@keyframes boutonHover {
+    0% {
+        transform: scale(1);
+        background-color: #24527a;
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: #5dacbd;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #24527a;
+    }
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ligne-checkbox{
+    margin-top: 1em;
+}
+
+h1{
+    text-align: center;
+}
